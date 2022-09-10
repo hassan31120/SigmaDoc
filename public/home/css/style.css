@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+/*header part*/
+.headerpart .font {
+  font-family: "Cairo", sans-serif;
+  font-family: "Tajawal", sans-serif;
+}
+
+.headerpart .header {
+  background-color: #4c82ad;
+  color: white;
+  overflow: hidden;
+  width: 100%;
+}
+
+.headerpart ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.headerpart li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.headerpart a {
+  color: #000000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.headerpart a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.headerpart .grab {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+/*end header part*/
+
+/*index page*/
+.sliderCss
+{
+  width: 100%;
+  margin: 5px;
+}
+.buttonCss
+{
+  display: none;
+}
+.logoCSS
+{
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+}
+.discount
+{
+ height: 420px;
+ width: 420px;
+}
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.paddingCSS
+{
+  padding-left: 0;
+  padding-right: 0;
+  direction: rtl;
+}
+.borderCSS
+{
+  border: none;
+}
+.sectionFormDIR
+{
+  direction: rtl;
+}
+#brand1
+{
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+
+.formborderCSS
+{
+  border-right: none;
+  border-top: none;
+  border-left: non
+}
+body{
+  direction: rtl;
+}
+
+body .font
+{
+  font-family: 'Cairo', sans-serif;
+}
+#DivCss
+{
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+}
+/*end index pafe*/
+/*partners*/
+.sweet-warning
+{
+  background-color: black;
+  font-weight: bolder;
+  transition: all 0.3s ease;
+
+}
+.sweet-warning:not([disabled]):hover{
+background-color: #f0e8e8;
+color: #000000;
+}
+
+
+/*aboutUspart*/
+.aboutUspart .social-icon {
+  padding: 0;
+  margin-bottom: 0px;
+  float: right;
+}
+
+.aboutUspart ul {
+  padding: 0px;
+}
+.aboutUspart .social-icon li {
+  list-style: none;
+  display: inline-block;
+}
+.aboutUspart .social-icon li i {
+  font-size: 20px;
+  color: #262725;
+  border: solid 2px #ffffff;
+  height: 31px;
+  width: 31px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 100px;
+  line-height: 27px;
+  margin-right: 15px;
+  transition: 1s;
+  background: #fff;
+  transition: all .5s ease;
+}
+.aboutUspart .social-icon li i:hover {
+  border: solid 2px #262725;
+  color: #ffffff;
+  font-size: 22px;
+  background: #262725;
+}
+/*aboutUspart*/
+
+/*foooooter*/
+.footerpart .font {
+  font-family: "Cairo", sans-serif;
+}
+.footerpart footer {
+  color: rgb(0, 0, 0);
+}
+.footerpart ul {
+  padding: 0px;
+}
+.footerpart ol,
+ul {
+  margin-bottom: 0px;
+}
+
+.footerpart .social-icon {
+  padding: 0;
+  margin-bottom: 0px;
+  float: right;
+}
+
+.footerpart .social-icon li {
+  list-style: none;
+  display: inline-block;
+}
+.footerpart .social-icon li i {
+  font-size: 14px;
+  color: #262725;
+  border: solid 2px #ffffff;
+  height: 31px;
+  width: 31px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 100px;
+  line-height: 27px;
+  margin-right: 15px;
+  transition: 1s;
+  background: #fff;
+}
+.footerpart .social-icon li i:hover {
+  border: solid 2px #262725;
+  color: #ffffff;
+  background: #262725;
+}
+
+.footerpart .phone-no i {
+  position: relative;
+  margin-right: 14px;
+  font-size: 43px;
+  top: 5px;
+}
+.footerpart .phone-no {
+  margin-top: -22px;
+  text-align: right;
+}
+.footerpart .footer-day-time {
+  padding-bottom: 30px;
+  border-bottom: 2px solid #7a6f6f;
+  padding-top: 14px;
+  margin-bottom: 55px;
+}
+.footerpart .footer-day-time ul li {
+  display: inline;
+  margin-right: 20px;
+}
+.footerpart .footer-day-time ul li:last-child {
+  margin-right: 0px;
+}
+.footerpart .phone-no a {
+  color: rgb(8, 6, 6);
+  font-family: "Cairo", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+.footerpart .footer-top {
+  background: #f7f3f3;
+  padding: 50px 0 50px;
+}
+.footer-top h4 {
+  font-size: 19px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.footer-top p {
+  font-size: 13px;
+  line-height: 2;
+}
+
+.footerpart footer p {
+  margin-bottom: 0;
+}
+.footerpart .footer-logo {
+  display: block;
+  margin-bottom: 32px;
+}
+.footerpart .address1 li {
+  list-style: none;
+  position: relative;
+  line-height: 26px;
+}
+.footerpart ul.address1 span {
+  position: absolute;
+  width: 40px;
+  left: 0;
+}
+.footerpart .address1 li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+.footerpart ul.address1 i {
+  margin-left: 5px;
+  text-align: center;
+  font-size: 28px;
+  top: 0;
+}
+
+.footerpart ul.address1 i.fa-envelope {
+  font-size: 18px;
+  top: 4px;
+}
+.footerpart footer ul.social-icon {
+  float: left;
+}
+.footerpart footer .social-icon li i:hover {
+  background: #0f8de0;
+  border-color: #4216e0;
+}
+
+/*copy right*/
+.footerpart .footer-bottom {
+  background: #f0e8e8;
+  padding: 10px 0px;
+  justify-content: center;
+}
+.footerpart .footer-bottom ul li {
+  display: inline;
+  margin-right: 20px;
+  font-size: 18px;
+}
+.footerpart .footer-bottom ul li a {
+  color: #fff;
+}
+
+.footerpart .footer-bottom ul {
+  float: right;
+}
+
+.footerpart .footer-bottom ul li:last-child {
+  margin-right: 0;
+}
+.footerpart .copyright {
+  font-size: 18px;
+}
+/*end foooter*/
