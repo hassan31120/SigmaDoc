@@ -1,4 +1,4 @@
-@extends('home.layouts.main')
+ {{-- @extends('home.layouts.main')
 
 @section('content')
     <div class="container-fluid font">
@@ -26,39 +26,42 @@
                                             <!--end logo-->
                                             <!--content-->
                                             <div class="col-lg-12 col-md-12 col-sm-12 p-4">
-                                                <form class="row">
+                                                 <form class="row" method="POST" action="{{ route('form.create') }}">
                                                     <div class="col-md-12">
                                                         <label class="form-label"></label>
-                                                        <input type="text"
+                                                        <input type="text" name="'first_name" required
                                                             class="form-control border-top-0 border-start-0 border-end-0"
                                                             placeholder="الاسم الاول" />
                                                     </div>
                                                     <div class="col-md-12">
                                                         <label class="form-label text-center"></label>
-                                                        <input type="text"
+                                                        <input type="text" name="last_name" required
                                                             class="form-control border-top-0 border-start-0 border-end-0"
                                                             placeholder="الاسم الاخير" />
                                                     </div>
                                                     <div class="col-md-12">
                                                         <label class="form-label"></label>
-                                                        <input type="text"
+                                                        <input type="text" name="address"
                                                             class="form-control border-top-0 border-start-0 border-end-0"
                                                             placeholder="العنوان" />
                                                     </div>
                                                     <div class="col-md-12">
                                                         <label class="form-label">
                                                         </label>
-                                                        <input type="text"
+                                                        <input type="text" name="mobile" required
                                                             class="form-control border-top-0 border-start-0 border-end-0"
                                                             placeholder="رقم الهاتف" />
                                                     </div>
                                                     <div class="col-md-4">
                                                         <br />
-                                                        <button class="btn btn-primary form-control fw-bold">
+                                                        <button class="btn btn-primary form-control fw-bold" type="submit">
                                                             تسجيل
                                                         </button>
                                                     </div>
                                                 </form>
+
+
+
                                             </div>
                                             <!--end content-->
                                         </form>
@@ -72,4 +75,13 @@
         </section>
         <!--endform section-->
     </div>
-@endsection
+@endsection --}}
+
+<form action="{{ route('form.create') }}" method="post">
+    @csrf
+    <input type="text" name="first_name" class="form-control">
+    <input type="text" name="last_name" class="form-control">
+    <input type="text" name="address" class="form-control">
+    <input type="text" name="mobile" class="form-control">
+    <button type="submit">submit</button>
+</form>

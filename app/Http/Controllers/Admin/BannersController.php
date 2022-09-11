@@ -3,13 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\City;
-use App\Models\Partner;
+use App\Models\Banner;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\File;
 
-class PartnerController extends Controller
+class BannersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,8 +18,8 @@ class PartnerController extends Controller
     public function index()
     {
         Carbon::setLocale('ar');
-        $partners = Partner::all();
-        return view('admin.partners.index', compact('partners'));
+        $banners = Banner::all();
+        return view('admin.banners.index', compact('banners'));
     }
 
     /**
@@ -30,8 +29,7 @@ class PartnerController extends Controller
      */
     public function create()
     {
-        $cities = City::all();
-        return view('admin.partners.add', compact('cities'));
+        return view('admin.banners.add');
     }
 
     /**
@@ -43,21 +41,22 @@ class PartnerController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'image' => 'required',
-            'discount' => 'required|numeric',
-            'city_id' => 'required'
+            'image' => ['required']
         ]);
+
         $data = $request->all();
+
         if ($request->hasFile('image')) {
             $file = $request->file('image');
-            $filepath = 'admin/images/pertners/' . date('Y') . '/' . date('m') . '/';
+            $filepath = 'admin/images/banners/' . date('Y') . '/' . date('m') . '/';
             $filename = $filepath . time() . '-' . $file->getClientOriginalName();
             $file->move($filepath, $filename);
             $data['image'] = $filename;
         }
-        Partner::create($data);
-        return redirect(route('admin.partners'))->with('success', 'تم اضافة الشريك بنجاح');
+
+        Banner::create($data);
+
+        return redirect(route('admin.banners'))->with('success', 'تم اضافة الصورة بنجاح');
     }
 
     /**
@@ -79,9 +78,8 @@ class PartnerController extends Controller
      */
     public function edit($id)
     {
-        $partner = Partner::find($id);
-        $cities = City::all();
-        return view('admin.partners.edit', compact('partner', 'cities'));
+        $banner = Banner::find($id);
+        return view('admin.banners.edit', compact('banner'));
     }
 
     /**
@@ -93,17 +91,13 @@ class PartnerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $partner = Partner::find($id);
-        $request->validate([
-            'name' => 'required',
-            'discount' => 'required|numeric',
-            'city_id' => 'required'
-        ]);
+        $banner = Banner::find($id);
+
         $data = $request->except(['old-image']);
 
         if($request->hasfile('image')){
             $file = $request->file('image');
-            $filepath = 'admin/images/pertners/'.date('Y').'/'.date('m').'/';
+            $filepath = 'admin/images/banners/'.date('Y').'/'.date('m').'/';
             $filename =$filepath.time().'-'.$file->getClientOriginalName();
             $file->move($filepath, $filename);
             if(request('old-image')){
@@ -115,8 +109,11 @@ class PartnerController extends Controller
             }
           $data['image'] = $filename;
         }
-        $partner->update($data);
-        return redirect()->back()->with('success', 'تم تعديل الشريك بنجاح');
+
+        $banner->update($data);
+
+        return redirect()->back()->with('success', 'تم تعديل الصورة بنجاح');
+
     }
 
     /**
@@ -127,8 +124,8 @@ class PartnerController extends Controller
      */
     public function destroy($id)
     {
-        $partner = Partner::find($id);
-        $partner->delete();
-        return redirect(route('admin.partners'))->with('success', 'تم حذف الشريك بنجاح');
+        $banner = Banner::find($id);
+        $banner->delete();
+        return redirect(route('admin.banners'))->with('success', 'تم حذف الصورة بنجاح');
     }
 }

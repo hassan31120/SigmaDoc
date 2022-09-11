@@ -24,22 +24,13 @@
                         <span class="nav-link-text me-1">الأعضاء</span>
                     </a>
                 </li>
-                {{-- <li class="nav-item">
-                    <a class="nav-link {{ Request::path() == 'admin/addresses' ? 'active' : '' }}"
-                        href="{{ route('admin.addresses') }}">
-                        <div class="text-white text-center ms-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons-round opacity-10">format_textdirection_r_to_l</i>
-                        </div>
-                        <span class="nav-link-text me-1">العناوين</span>
-                    </a>
-                </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::path() == 'admin/news' ? 'active' : '' }}"
-                        href="{{ route('admin.news') }}">
+                    <a class="nav-link {{ Request::path() == 'admin/cities' ? 'active' : '' }}"
+                        href="{{ route('admin.cities') }}">
                         <div class="text-white text-center ms-2 d-flex align-items-center justify-content-center">
                             <i class="material-icons-round opacity-10">format_textdirection_r_to_l</i>
                         </div>
-                        <span class="nav-link-text me-1">الأخبار</span>
+                        <span class="nav-link-text me-1">المحافظات</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -52,50 +43,23 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::path() == 'admin/categories' ? 'active' : '' }}"
-                        href="{{ route('admin.categories') }}">
+                    <a class="nav-link {{ Request::path() == 'admin/partners' ? 'active' : '' }}"
+                        href="{{ route('admin.partners') }}">
                         <div class="text-white text-center ms-2 d-flex align-items-center justify-content-center">
                             <i class="material-icons-round opacity-10">format_textdirection_r_to_l</i>
                         </div>
-                        <span class="nav-link-text me-1">الشركات</span>
+                        <span class="nav-link-text me-1">الشركاء</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::path() == 'admin/subs' ? 'active' : '' }}"
-                        href="{{ route('admin.subs') }}">
+                    <a class="nav-link {{ Request::path() == 'admin/home/requests' ? 'active' : '' }}"
+                        href="{{ route('admin.requests') }}">
                         <div class="text-white text-center ms-2 d-flex align-items-center justify-content-center">
                             <i class="material-icons-round opacity-10">format_textdirection_r_to_l</i>
                         </div>
-                        <span class="nav-link-text me-1">الأقسام</span>
+                        <span class="nav-link-text me-1">الطلبات</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ Request::path() == 'admin/products' ? 'active' : '' }}"
-                        href="{{ route('admin.products') }}">
-                        <div class="text-white text-center ms-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons-round opacity-10">format_textdirection_r_to_l</i>
-                        </div>
-                        <span class="nav-link-text me-1">كل المنتجات</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ Request::path() == 'admin/zamzam' ? 'active' : '' }}"
-                        href="{{ route('admin.zamzam') }}">
-                        <div class="text-white text-center ms-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons-round opacity-10">format_textdirection_r_to_l</i>
-                        </div>
-                        <span class="nav-link-text me-1">مياة زمزم</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ Request::path() == 'admin/masajed' ? 'active' : '' }}"
-                        href="{{ route('admin.masajed') }}">
-                        <div class="text-white text-center ms-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons-round opacity-10">format_textdirection_r_to_l</i>
-                        </div>
-                        <span class="nav-link-text me-1">عروض المساجد</span>
-                    </a>
-                </li> --}}
             </ul>
         </div>
     </aside>

@@ -12,6 +12,13 @@ class Partner extends Model
     protected $fillable = [
         'name',
         'image',
-        'discount'
+        'discount',
+        'description',
+        'city_id'
     ];
+
+    public function cities(){
+        return $this->belongsTo(City::class, 'city_id');
+    }
+
 }

@@ -2,6 +2,13 @@
 
 @section('content')
     <!--slider-->
+
+    @if (session('success'))
+        <div class="alert alert-success">
+            <h4>{{ session('success') }}</h4>
+        </div>
+    @endif
+
     <div class="row d-flex justify-content-center m-2">
         <div id="carouselExampleControls" class="carousel slide sliderCss" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -114,7 +121,7 @@
             </div>
             <div class="row d-flex justify-content-center mb-5">
                 <div class="col-2 d-flex justify-content-center">
-                    <a href="{{ route("prtners") }}" class="btn btn-primary fw-bolder"> المزيد </a>
+                    <a href="{{ route('prtners') }}" class="btn btn-primary fw-bolder"> المزيد </a>
                 </div>
             </div>
             <!--partners-->
