@@ -1,77 +1,90 @@
-<!--footer-->
-<div class="footerpart">
-    <footer class="mt-4">
-        <div class="footer-top fonttst">
-            <div class="container">
-                <div class="footer-day-time">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <ul>
-                                <li>Opening Hours: Mon - Friday: 8AM - 5PM</li>
-                                <li>Sunday: 8:00 AM - 12:00 PM</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="phone-no">
-                                <a href="tel:+12 34 56 78 90"><i class="fa fa-mobile m-2" aria-hidden="true"></i>اتصل علي
-                                    +0
-                                    12 255 254</a>
-                            </div>
-                        </div>
-                    </div>
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-md-6 col-lg-3">
+                <h5 class="text-white mb-4">تواصل معنا</h5>
+                <p><i class="fa fa-map-marker-alt me-3 m-1"></i>Egypt, Mansoura</p>
+                <p><i class="fa fa-phone-alt me-3 m-1"></i>+20 01141630646</p>
+                <p><i class="fa fa-envelope me-3 m-1"></i>info@example.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                 </div>
-                <div class="row d-flex justify-content-center">
-                    <div class="col-lg-4 ">
-                        <h4 class="text-end fw-bolder">سجما دوك</h4>
-                        <p class="fw-bold text-end">
-                            تقنية جديدة وخطة فريدة للتسويق وفكرة تُطبق حصريًا في شركة سيجما
-                            ! سيجما دوك عبارة عن بطاقة تقدر عن طريقها التسويق لعيادتك من
-                            خلال كارت يضم مجموعة من أفضل العيادات ومختلف التخصصات ويحق لحامل
-                            الكارت أن يتم توفير خصم مميز له على باكدج معينة وعلى هذا فإن
-                            عيادتك جزء من هذا الخصم والكارت.
-                        </p>
-                    </div>
-                    <!--social media-->
-                    <div class="col-md-4">
-                        <h4>معلومات</h4>
-                        <ul class="address1">
-                            <li>
-                                <i class="fa fa-envelope"></i><a href="mailto:#">info@sigma.com</a>
-                            </li>
-                            <li>
-                                <i class="fa fa-mobile" aria-hidden="true"></i>
-                                <a href="tel:12 34 56 78 90">12 34 56 78 90</a>
-                            </li>
-                        </ul>
-                    </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <h5 class="text-white mb-4">العناوين الرئيسة</h5>
+                <a class="btn btn-link" href="./index.html">الرئيسية</a>
+                <a class="btn btn-link" href="./about.html">من نحن</a>
+                <a class="btn btn-link" href="./service.html">الشركاء</a>
+                <a class="btn btn-link" href="./contact.html">احجز كارتك</a>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <h5 class="text-white mb-4">يمكنك الوصول الينا</h5>
+                <a class="btn btn-link" href="">facebook</a>
+                <a class="btn btn-link" href="">twitter</a>
+                <a class="btn btn-link" href="">instgram</a>
+                <a class="btn btn-link" href="">linkedin</a>
+                <a class="btn btn-link" href="">youtube</a>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <h5 class="text-white mb-4">الاخبار</h5>
+                <p>تقنية جديدة وخطة فريدة للتسويق وفكرة تُطبق حصريًا في شركة سيجما !</p>
+                <div class="position-relative w-100 mt-3">
+                    <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
+                        placeholder="Your Email" style="height: 48px;">
+                    <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
+                            class="fa fa-paper-plane text-primary fs-4"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; SigmaDoc, All Right Reserved.
 
-                    <div class="col-md-4 d-flex justify-content-center mt-3">
-                        <h4 class="fw-bold text-center">تابعنا علي</h4>
-                        <ul class="social-icon">
-                            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
-                            </li>
-                        </ul>
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    Designed By <a class="border-bottom" href="#">sigma</a>
+
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-menu">
+                        <a href="./index.html">الرئيسة</a>
+                        <a href="./about.html">من نحن</a>
+                        <a href="./service.html">شركائنا</a>
+                        <a href="./contact.html">احجز كارتك</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-sm-5">
-                        <p class="copyright text-uppercase text-center fw-bolder">sigma © 2022</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    </div>
 </div>
-<!--end footer-->
+<!-- Footer End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+</div>
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ asset('home/lib/wow/wow.min.js') }}"></script>
+<script src="{{ asset('home/lib/easing/easing.min.js') }}"></script>
+<script src="{{ asset('home/lib/waypoints/waypoints.min.js') }}"></script>
+<script src="{{ asset('home/lib/owlcarousel/owl.carousel.min.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
-<script src="{{ asset('home/js/partners.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script>
+    <!-- Template Javascript
+    -->
+<script src="{{ asset('home/js/main.js') }}"></script>
 </body>
 
 </html>

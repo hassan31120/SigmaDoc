@@ -1,87 +1,59 @@
- {{-- @extends('home.layouts.main')
+@extends('home.layouts.main')
 
 @section('content')
-    <div class="container-fluid font">
-        <!--form section-->
-        <section class="fonttst">
-            <div class="container py-5 h-100">
-                <div class="row d-flex justify-content-center align-items-center">
-                    <div class="col col-xl-10">
-                        <div class="card" style="border-radius: 0.5rem">
-                            <div class="row g-0 d-flex justify-content-center align-items-center">
-                                <div class="col-md-6 col-lg-7 d-flex align-items-center">
-                                    <div class="card-body p-4 p-lg-5 text-black">
-                                        <form>
-                                            <!--logo-->
-                                            <div class="d-flex align-items-center mb-3 pb-1">
-                                                <span class="h1 fw-bold mb-0">
-                                                    <img src="{{ asset('home/img/black.png') }}" width="50" height="50"
-                                                        alt="" />
-                                                </span>
-                                            </div>
+    <div class="container-xxl bg-primary page-header">
+        <div class="container text-center">
+            <h1 class="text-white animated zoomIn mb-3"> احجز كارتك</h1>
+        </div>
+    </div>
+    </div>
+    <!-- Contact Start -->
+    <div class="container-xxl py-6">
+        <div class="container">
+            <div class="mx-auto text-center wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">احجز كارتك</div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.3s">
 
-                                            <h5 class="fw-normal mb-3 pb-3 fw-bolder" style="letter-spacing: 1px">
-                                                احجز كارتك
-                                            </h5>
-                                            <!--end logo-->
-                                            <!--content-->
-                                            <div class="col-lg-12 col-md-12 col-sm-12 p-4">
-                                                 <form class="row" method="POST" action="{{ route('form.create') }}">
-                                                    <div class="col-md-12">
-                                                        <label class="form-label"></label>
-                                                        <input type="text" name="'first_name" required
-                                                            class="form-control border-top-0 border-start-0 border-end-0"
-                                                            placeholder="الاسم الاول" />
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <label class="form-label text-center"></label>
-                                                        <input type="text" name="last_name" required
-                                                            class="form-control border-top-0 border-start-0 border-end-0"
-                                                            placeholder="الاسم الاخير" />
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <label class="form-label"></label>
-                                                        <input type="text" name="address"
-                                                            class="form-control border-top-0 border-start-0 border-end-0"
-                                                            placeholder="العنوان" />
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <label class="form-label">
-                                                        </label>
-                                                        <input type="text" name="mobile" required
-                                                            class="form-control border-top-0 border-start-0 border-end-0"
-                                                            placeholder="رقم الهاتف" />
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <br />
-                                                        <button class="btn btn-primary form-control fw-bold" type="submit">
-                                                            تسجيل
-                                                        </button>
-                                                    </div>
-                                                </form>
-
-
-
-                                            </div>
-                                            <!--end content-->
-                                        </form>
-                                    </div>
+                    <form action="{{ route('form.create') }}" method="post">
+                        @csrf
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <span class="input-group-addon">الاسم الاول</span>
+                                    <input type="text" class="form-control" id="name" name="first_name"
+                                        placeholder="Your Name">
                                 </div>
                             </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <span class="input-group-addon">الاسم الثاني</span>
+                                    <input type="text" class="form-control" id="name" name="last_name"
+                                        placeholder="Your Name">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <span class="input-group-addon">رقم الهاتف</span>
+                                    <input type="tel" name="mobile" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <span class="input-group-addon">العنوان</span>
+                                    <input type="text" name="address" class="form-control" id="subject"
+                                        placeholder="Subject">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">ارسال</button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
-        </section>
-        <!--endform section-->
+        </div>
     </div>
-@endsection --}}
-
-<form action="{{ route('form.create') }}" method="post">
-    @csrf
-    <input type="text" name="first_name" class="form-control">
-    <input type="text" name="last_name" class="form-control">
-    <input type="text" name="address" class="form-control">
-    <input type="text" name="mobile" class="form-control">
-    <button type="submit">submit</button>
-</form>
+    <!-- Contact End -->
+@endsection

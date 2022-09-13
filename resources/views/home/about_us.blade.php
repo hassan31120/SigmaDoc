@@ -1,41 +1,46 @@
 @extends('home.layouts.main')
 
 @section('content')
-    <div class="section aboutUspart">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="col-sm-6 col-md-6 col-lg-6 d-flex justify-content-center">
-                    <img src="{{ asset('home/img/black.png') }}" width="250" height="250" />
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-6 font">
-                    <div class="title text-center">
-                        <h1>سجما دوك</h1>
-                    </div>
-                    <div class="content text-center">
-                        <h3>
-                            تقنية جديدة وخطة فريدة للتسويق وفكرة تُطبق حصريًا في شركة سيجما
-                            !
-                        </h3>
-                        <p>
-                            سيجما دوك عبارة عن بطاقة تقدر عن طريقها التسويق لعيادتك من خلال
-                            كارت يضم مجموعة من أفضل العيادات ومختلف التخصصات ويحق لحامل
-                            الكارت أن يتم توفير خصم مميز له على باكدج معينة وعلى هذا فإن
-                            عيادتك جزء من هذا الخصم والكارت.
-                        </p>
-                        <div class="button">
-                            <input class="btn btn-primary" type="button" value="المزيد" />
+
+<div class="container-xxl bg-primary page-header">
+    <div class="container text-center">
+        <h1 class="text-black animated zoomIn mb-3">سيجما دوك</h1>
+        <center>
+            <img src="{{ asset('home/gallery/black.png') }}" width="40" height="40" alt="">
+        </center>
+    </div>
+</div>
+</div>
+<!-- Navbar & Hero End -->
+<!-- About Start -->
+<center>
+<div class="container-xxl py-6 mt-0 pt-0">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow zoomIn" data-wow-delay="0.1s">
+                <img class="img-fluid" src="{{ asset('home/gallery/discountii-modified.png') }}">
+            </div>
+            <div class="col-lg-6 wow fadeInUp fw-bold" data-wow-delay="0.1s">
+                <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">من نحن</div>
+                <h2 class="mb-4">سيجما دوك</h2>
+                <p class="mb-4">تقنية جديدة وخطة فريدة للتسويق وفكرة تُطبق حصريًا في شركة سيجما !</p>
+                <div class="row g-3 mb-4">
+                    <div class="col-12 d-flex">
+                        <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                            <i class="fa fa-user-tie text-white"></i>
                         </div>
-                        <div class="row d-flex justify-content-center mt-3">
-                            <ul class="social-icon">
-                                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a></li>
-                            </ul>
+                        <div class="ms-4">
+                            <h6 class=" fw-bolder">خطة العمل داخل سيجما دوك</h6>
+                            <span>سيجما دوك عبارة عن بطاقة
+                                تقدر عن طريقها التسويق لعيادتك من خلال كارت يضم مجموعة من أفضل العيادات ومختلف التخصصات ويحق لحامل الكارت أن يتم توفير خصم مميز له على باكدج معينة وعلى هذا فإن عيادتك جزء من هذا الخصم والكارت.</span>
                         </div>
-                        <hr />
                     </div>
                 </div>
+                <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="">اعرف اكثر</a>
             </div>
         </div>
     </div>
+</div>
+</center>
+<!-- About End -->
 @endsection

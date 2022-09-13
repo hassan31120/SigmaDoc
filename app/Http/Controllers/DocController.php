@@ -2,17 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Partner;
 use App\Models\Request as ModelsRequest;
 use Illuminate\Http\Request;
 
 class DocController extends Controller
 {
     public function index(){
-        return view('home.home');
+
+        $partners = Partner::latest()->take(3)->get();
+        return view('home.home', compact('partners'));
+
     }
 
     public function prtners(){
-        return view('home.partners');
+        $partners = Partner::all();
+        return view('home.partners', compact('partners'));
     }
 
     public function us(){

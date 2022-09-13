@@ -23,7 +23,7 @@ use App\Http\Controllers\DocController;
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/', [DocController::class, 'index'])->name('home');
-Route::get('/prtners', [DocController::class, 'prtners'])->name('prtners');
+Route::get('/prtners', [DocController::class, 'prtners'])->name('partners');
 Route::get('/about-us', [DocController::class, 'us'])->name('about_us');
 Route::get('/form', [DocController::class, 'form'])->name('form');
 Route::post('/form/create', [DocController::class, 'store'])->name('form.create');

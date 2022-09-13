@@ -2,57 +2,58 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sigma Doc</title>
-    <link rel="stylesheet" href="{{ asset('home//css/style.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
-    </script>
+    <meta charset="utf-8">
+    <title>BizConsult - Consulting HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
+    <!-- Favicon -->
+    <link href="{{ asset('img/favicon.icon') }}" rel="icon">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{{ asset('home/lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('home/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{ asset('home/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{{ asset('home/css/style.css') }}" rel="stylesheet">
 </head>
 
 <body>
-    <div class="headerpart">
-        <!--nav bar-->
-        <div>
-            <div class="container-fluid header">
-                <div class="container header">
-                    <nav class="navbar navbar-expand-lg navbar-light header font">
-                        <div class="container-fluid header">
-                            <router-link to="/" exac><a><img src="{{ asset('home/img/logo.png') }}"
-                                        width="50px" height="50" alt="alt" /></a></router-link>
-
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                                aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item grab">
-                                        <router-link to="/" exac><a href="{{ route('home') }}" class="fw-bold">الرئيسة</a></router-link>
-                                    </li>
-                                    <li class="nav-item grab">
-                                        <router-link to="/about"><a href="{{ route('about_us') }}" class="fw-bold">من نحن
-                                            </a></router-link>
-                                    </li>
-                                    <li class="nav-item grab">
-                                        <router-link to="/portfolio"><a href="{{ route('form') }}" class="fw-bold">احجز كارتك</a></router-link>
-                                    </li>
-                                    <li class="nav-item grab">
-                                        <router-link to="/Partners"><a href="{{ route('prtners') }}" class="fw-bold">شركائنا</a></router-link>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
+    <div class="container-xxl bg-white p-0 font">
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0">
+                    <img src="{{ asset('home/gallery/black.png') }}" alt="">
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="{{ route('home') }}" class="nav-item nav-link {{ Request::path() == '/' ? 'active' : '' }}">الرئيسية</a>
+                        <a href="{{ route('about_us') }}" class="nav-item nav-link {{ Request::path() == 'about-us' ? 'active' : '' }}">من نحن</a>
+                        <a href="{{ route('partners') }}" class="nav-item nav-link {{ Request::path() == 'prtners' ? 'active' : '' }}">شركائنا</a>
+                        <a href="{{ route('form') }}" class="nav-item nav-link {{ Request::path() == 'form' ? 'active' : '' }}">احجز كارتك</a>
+                    </div>
+                    <a href="{{ route('home') }}"
+                        class="btn btn-light rounded-pill text-primary py-2 px-4 ms-lg-5">SigmaDoc</a>
                 </div>
-            </div>
-        </div>
-        <!--nav bar-->
-    </div>
+            </nav>
+
+            <!-- Navbar & Hero End -->
