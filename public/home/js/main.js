@@ -35,7 +35,7 @@
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
+        $('html, body').animate({ scrollTop: 0 }, 0, 'easeInOutExpo');
         return false;
     });
 
@@ -103,7 +103,7 @@ function showDis(partner) {
     swal({
         position: 'top-end',
         icon: 'success',
-        title: 'Discount is' + `${partner}`,
+        title: ' قيمة الخصم: ' + `${partner}` + ' %',
         showConfirmButton: false,
         buttons: {
             confirm: {

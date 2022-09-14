@@ -1,5 +1,5 @@
 <!-- Footer Start -->
-<div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
+<div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn " data-wow-delay="0.1s" style="margin-top: 6rem;">
     <div class="container py-5">
         <div class="row g-5">
             <div class="col-md-6 col-lg-3">
@@ -16,13 +16,13 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <h5 class="text-white mb-4">العناوين الرئيسة</h5>
+                <h5 class="text-white mb-4 text-center">العناوين الرئيسة</h5>
                 <a class="btn btn-link" href="{{ route('home') }}">الرئيسية</a>
                 <a class="btn btn-link" href="{{ route('about_us') }}">من نحن</a>
                 <a class="btn btn-link" href="{{ route('partners') }}">الشركاء</a>
                 <a class="btn btn-link" href="{{ route('form') }}">احجز كارتك</a>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <div class="col-md-6 col-lg-3 text-center">
                 <h5 class="text-white mb-4">يمكنك الوصول الينا</h5>
                 <a class="btn btn-link" href="">facebook</a>
                 <a class="btn btn-link" href="">twitter</a>
@@ -37,7 +37,7 @@
                     <form action="{{ route('form.createMail') }}" method="POST">
                         @csrf
                         <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="email"
-                            placeholder="Your Email" name="email" style="height: 48px;" required>
+                            placeholder="ادخل بريدك الالكتروني" name="email" style="height: 48px;" required>
                         <button type="submit" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
                                 class="fa fa-paper-plane text-primary fs-4"></i></button>
                     </form>
@@ -52,7 +52,7 @@
                     &copy; SigmaDoc, All Right Reserved.
 
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a class="border-bottom" target="_blank" href="https://sigma-business.com/">sigma</a>
+                    Designed By <a class="border-bottom" target="_blank" href="https://sigma-business.com/">SIGMA</a>
 
                 </div>
                 <div class="col-md-6 text-center text-md-end">

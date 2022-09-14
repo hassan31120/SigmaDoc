@@ -27,6 +27,9 @@
                                         <th class="text-center text-uppercase text-secondary font-weight-bolder opacity-7">
                                             منذ</th>
 
+                                        <th class="text-center text-uppercase text-secondary font-weight-bolder opacity-7">
+                                            حذف</th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -45,6 +48,15 @@
 
                                                 <span
                                                     class="text-secondary text-xs font-weight-bold">{{ $email->created_at->diffForHumans() }}</span>
+                                            </td>
+
+                                            <td class="align-middle text-center">
+                                                <a href="{{ route('admin.emails.destroy', $email->id) }}"
+                                                    class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
+                                                    data-original-title="Delete user"
+                                                    onclick="return confirm('هل انت متأكد من حذف الايميل؟')">
+                                                    <i class="fa fa-trash"></i>
+                                                </a>
                                             </td>
 
                                         </tr>

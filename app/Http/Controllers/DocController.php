@@ -6,6 +6,7 @@ use App\Models\Email;
 use App\Models\Partner;
 use App\Models\Request as ModelsRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class DocController extends Controller
 {
@@ -41,12 +42,17 @@ class DocController extends Controller
     }
 
     public function storeEmail(Request $request){
-        $request->validate([
+        $validator = Validator::make($request->all(), [
             'email' => 'required'
         ]);
+
+        if ($validator->fails()) {
+            return $this->sendError('please Validate error', $validator->errors());
+        }
+
         $data = $request->all();
         Email::create($data);
-        return redirect(route('home'))->with('success', 'تم تسجيل في الخدمة بنجاح');
+        return redirect(route('home'))->with('success', 'تم التسجيل في الخدمة بنجاح');
     }
 
 }

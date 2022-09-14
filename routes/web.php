@@ -73,7 +73,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'isAdmin'], function () {
 
     //Requests
     Route::get('requests', ['uses' => 'App\Http\Controllers\Admin\RequestsController@index'])->name('admin.requests');
+    Route::get('requests/destroy/{id}', ['uses' => 'App\Http\Controllers\Admin\RequestsController@destroy'])->name('admin.requests.destroy');
+
 
     //Emails
    Route::get('emails', ['uses' => 'App\Http\Controllers\Admin\EmailController@index'])->name('admin.emails');
+   Route::get('emails/destroy/{id}', ['uses' => 'App\Http\Controllers\Admin\EmailController@destroy'])->name('admin.emails.destroy');
 });

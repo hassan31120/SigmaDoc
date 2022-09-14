@@ -22,7 +22,7 @@
             <div class="row g-4">
                 @foreach ($partners as $partner)
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item rounded h-100">
+                        <div class="service-item rounded h-100 p-3">
                             <div class="d-flex justify-content-center">
                                 <img src="{{ asset($partner->image) }}" alt="" style="height: 200px;">
                             </div>
@@ -33,8 +33,8 @@
                                     <span>{{ $partner->description }}</span>
                                 </div>
                                 <div class="btn-group" role="group" aria-label="Basic example">
-                                    <button onclick="showDis({{ $partner->discount }})" type="button" class="btn btn-primary">show
-                                        discount</button>
+                                    <button onclick="showDis({{ $partner->discount }})" type="button" class="btn btn-primary">
+                                        عرض الخصم</button>
                                 </div>
                             </center>
                         </div>

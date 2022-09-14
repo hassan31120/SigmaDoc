@@ -84,6 +84,8 @@ class RequestsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $req = ModelsRequest::find($id);
+        $req->delete();
+        return redirect(route('admin.requests'))->with('success', 'تم حذف الطلب بنجاح');
     }
 }

@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="{{ asset('img/favicon.icon') }}" rel="icon">
+    <link href="{{ asset('home/gallery/logo.png') }}" rel="icon">
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,12 +31,12 @@
     <link href="{{ asset('home/css/style.css') }}" rel="stylesheet">
 </head>
 
-<body>
+<body style="overflow-x: hidden;">
     <div class="container-xxl bg-white p-0 font">
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand p-0">
+                <a href="{{ route('home') }}" class="navbar-brand p-0">
                     <img src="{{ asset('home/gallery/black.png') }}" alt="">
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
@@ -52,7 +52,7 @@
                         <a href="{{ route('form') }}" class="nav-item nav-link {{ Request::path() == 'form' ? 'active' : '' }}">احجز كارتك</a>
                     </div>
                     <a href="{{ route('home') }}"
-                        class="btn btn-light rounded-pill text-primary py-2 px-4 ms-lg-5">SigmaDoc</a>
+                        class="btn btn-light rounded-pill text-primary py-2 px-4 ms-lg-5">SIGMAdoc</a>
                 </div>
             </nav>
 

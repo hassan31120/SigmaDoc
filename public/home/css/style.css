@@ -1,30 +1,30 @@
 /********** Template CSS **********/
 @import url("https://fonts.googleapis.com/css2?family=Cairo&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
-.font 
+.font
 {
     font-family: "Cairo", sans-serif;
 }
-.font h1 
+.font h1
 {
     font-family: "Cairo", sans-serif;
 }
-.font h2 
+.font h2
 {
     font-family: "Cairo", sans-serif;
 }
-.font h3 
+.font h3
 {
     font-family: "Cairo", sans-serif;
 }
-.font h4 
+.font h4
 {
     font-family: "Cairo", sans-serif;
 }
-.font h5 
+.font h5
 {
     font-family: "Cairo", sans-serif;
 }
-.font h6 
+.font h6
 {
     font-family: "Cairo", sans-serif;
 }
@@ -178,7 +178,7 @@ body
         border-bottom: 1px solid rgba(256, 256, 256, .2);
         z-index: 999;
     }
-    
+
     .sticky-top.navbar {
         position: fixed;
         background: #FFFFFF;
@@ -308,11 +308,12 @@ body
     color: var(--light);
     font-weight: normal;
     transition: .3s;
+    text-align: center;
 }
 
 .footer .btn.btn-link::before {
     position: relative;
-    content: "\f105";
+    /* content: "\f105"; */
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     margin-right: 10px;

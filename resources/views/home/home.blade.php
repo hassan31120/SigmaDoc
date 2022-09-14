@@ -13,7 +13,7 @@
                     <h4 style="color: white">{{ session('success') }}</h4>
                 </div>
             @endif
-            <div class="row g-5 align-items-center mb-5">
+            <div class="row align-items-center mb-5">
                 <div class="col-lg-6 text-center text-lg-start">
                     <h1 class="text-white mb-4 animated zoomIn">تقنية جديدة وخطة فريدة للتسويق وفكرة تُطبق حصريًا في شركة
                         سيجما !</h1>
@@ -77,7 +77,7 @@
                         <form action="{{ route('form.createMail') }}" method="POST">
                             @csrf
                             <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="email"
-                                placeholder="Enter Your Email" name="email" style="height: 48px;" required>
+                                placeholder="ادخل بريدك الالكتروني" name="email" style="height: 48px;" required>
                             <button type="submit" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
                                     class="fa fa-paper-plane text-primary fs-4"></i></button>
                         </form>
@@ -106,7 +106,7 @@
             <div class="row g-4">
                 @foreach ($partners as $partner)
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item rounded h-100">
+                        <div class="service-item rounded h-100 p-3">
                             <div class="d-flex justify-content-center">
                                 <img src="{{ asset($partner->image) }}" alt="" style="height: 200px;">
                             </div>
@@ -118,8 +118,8 @@
                                 </div>
                                 <div class="btn-group" role="group" aria-label="Basic example">
                                     <button onclick="showDis({{ $partner->discount }})" type="button"
-                                        class="btn btn-primary">show
-                                        discount</button>
+                                        class="btn btn-primary">
+                                        عرض الخصم</button>
                                 </div>
                             </center>
                         </div>

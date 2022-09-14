@@ -32,6 +32,8 @@
 
                                         <th class="text-center text-uppercase text-secondary font-weight-bolder opacity-7">
                                             منذ</th>
+                                        <th class="text-center text-uppercase text-secondary font-weight-bolder opacity-7">
+                                            حذف</th>
 
                                     </tr>
                                 </thead>
@@ -60,6 +62,15 @@
 
                                                 <span
                                                     class="text-secondary text-xs font-weight-bold">{{ $req->created_at->diffForHumans() }}</span>
+                                            </td>
+
+                                            <td class="align-middle text-center">
+                                                <a href="{{ route('admin.requests.destroy', $req->id) }}"
+                                                    class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
+                                                    data-original-title="Delete user"
+                                                    onclick="return confirm('هل انت متأكد من حذف الطلب؟')">
+                                                    <i class="fa fa-trash"></i>
+                                                </a>
                                             </td>
 
                                         </tr>

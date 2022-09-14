@@ -84,6 +84,8 @@ class EmailController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $email = Email::find($id);
+        $email->delete();
+        return redirect(route('admin.emails'))->with('success', 'تم حذف الايميل بنجاح');
     }
 }
