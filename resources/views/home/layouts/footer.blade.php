@@ -17,10 +17,10 @@
             </div>
             <div class="col-md-6 col-lg-3">
                 <h5 class="text-white mb-4">العناوين الرئيسة</h5>
-                <a class="btn btn-link" href="./index.html">الرئيسية</a>
-                <a class="btn btn-link" href="./about.html">من نحن</a>
-                <a class="btn btn-link" href="./service.html">الشركاء</a>
-                <a class="btn btn-link" href="./contact.html">احجز كارتك</a>
+                <a class="btn btn-link" href="{{ route('home') }}">الرئيسية</a>
+                <a class="btn btn-link" href="{{ route('about_us') }}">من نحن</a>
+                <a class="btn btn-link" href="{{ route('partners') }}">الشركاء</a>
+                <a class="btn btn-link" href="{{ route('form') }}">احجز كارتك</a>
             </div>
             <div class="col-md-6 col-lg-3">
                 <h5 class="text-white mb-4">يمكنك الوصول الينا</h5>
@@ -34,10 +34,13 @@
                 <h5 class="text-white mb-4">الاخبار</h5>
                 <p>تقنية جديدة وخطة فريدة للتسويق وفكرة تُطبق حصريًا في شركة سيجما !</p>
                 <div class="position-relative w-100 mt-3">
-                    <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
-                        placeholder="Your Email" style="height: 48px;">
-                    <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
-                            class="fa fa-paper-plane text-primary fs-4"></i></button>
+                    <form action="{{ route('form.createMail') }}" method="POST">
+                        @csrf
+                        <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="email"
+                            placeholder="Your Email" name="email" style="height: 48px;" required>
+                        <button type="submit" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
+                                class="fa fa-paper-plane text-primary fs-4"></i></button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -49,15 +52,15 @@
                     &copy; SigmaDoc, All Right Reserved.
 
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a class="border-bottom" href="#">sigma</a>
+                    Designed By <a class="border-bottom" target="_blank" href="https://sigma-business.com/">sigma</a>
 
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <div class="footer-menu">
-                        <a href="./index.html">الرئيسة</a>
-                        <a href="./about.html">من نحن</a>
-                        <a href="./service.html">شركائنا</a>
-                        <a href="./contact.html">احجز كارتك</a>
+                        <a href="{{ route('home') }}">الرئيسة</a>
+                        <a href="{{ route('about_us') }}">من نحن</a>
+                        <a href="{{ route('partners') }}">شركائنا</a>
+                        <a href="{{ route('form') }}">احجز كارتك</a>
                     </div>
                 </div>
             </div>
@@ -79,11 +82,7 @@
 <script src="{{ asset('home/lib/waypoints/waypoints.min.js') }}"></script>
 <script src="{{ asset('home/lib/owlcarousel/owl.carousel.min.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.1.min.js"
-    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-<script>
-    <!-- Template Javascript
-    -->
+
 <script src="{{ asset('home/js/main.js') }}"></script>
 </body>
 

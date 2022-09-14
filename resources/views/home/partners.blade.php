@@ -26,14 +26,14 @@
                             <div class="d-flex justify-content-center">
                                 <img src="{{ asset($partner->image) }}" alt="" style="height: 200px;">
                             </div>
+
                             <center>
                                 <div class="p-5">
                                     <h5 class="mb-3">{{ $partner->name }}</h5>
-                                    <h5 class="mb-3">{{ $partner->discount }}</h5>
                                     <span>{{ $partner->description }}</span>
                                 </div>
                                 <div class="btn-group" role="group" aria-label="Basic example">
-                                    <button onclick="showDis()" type="button" class="btn btn-primary">show
+                                    <button onclick="showDis({{ $partner->discount }})" type="button" class="btn btn-primary">show
                                         discount</button>
                                 </div>
                             </center>

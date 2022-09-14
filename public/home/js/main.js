@@ -99,3 +99,16 @@
 })(jQuery);
 
 
+function showDis(partner) {
+    swal({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Discount is' + `${partner}`,
+        showConfirmButton: false,
+        buttons: {
+            confirm: {
+                className: 'sweet-warning'
+            },
+        },
+    })
+}

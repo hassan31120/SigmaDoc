@@ -1,9 +1,7 @@
 @extends('admin.layouts.main')
-
 @section('dash')
-    الطلبات
+    الإيميلات
 @endsection
-
 @section('content')
     <div class="row">
         <div class="col-12">
@@ -12,23 +10,19 @@
                     <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3 row">
                         <div class="col-6">
                             <h5 class="text-white text-capitalize ps-3" style="margin-right: 10px; font-weight: 700;">جدول
-                                الطلبات</h5>
+                                الإيميلات</h5>
                         </div>
                     </div>
                 </div>
                 <div class="card-body px-0 pb-2">
                     <div class="table-responsive p-0">
-                        @if (count($reqs) > 0)
+                        @if (count($emails) > 0)
                             <table class="table align-items-center mb-0">
                                 <thead>
                                     <tr>
                                         {{-- <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">#</th> --}}
-                                        <th class="text-secondary font-weight-bolder opacity-7">الإسم
+                                        <th class="text-secondary font-weight-bolder opacity-7">الايميل
                                         </th>
-                                        <th class="text-secondary font-weight-bolder opacity-7">العنوان
-                                        </th>
-                                        <th class="text-uppercase text-secondary font-weight-bolder opacity-7 ps-2">
-                                            الرقم</th>
 
                                         <th class="text-center text-uppercase text-secondary font-weight-bolder opacity-7">
                                             منذ</th>
@@ -36,30 +30,21 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($reqs as $req)
+                                    @foreach ($emails as $email)
                                         <tr>
                                             <td>
                                                 <div class="d-flex px-2 py-1">
                                                     <div class="d-flex flex-column justify-content-center">
                                                         <h6 class="mb-0 text-sm">
-                                                            {{ $req->first_name . ' ' . $req->last_name }}</h6>
+                                                            {{ $email->email }}</h6>
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td>
-                                                <p class="text-xs font-weight-bold mb-0">{{ $req->address }}</p>
-                                            </td>
-
-                                            <td>
-                                                <p class="text-xs font-weight-bold mb-0">{{ $req->mobile }}</p>
-                                            </td>
-
-
 
                                             <td class="align-middle text-center">
 
                                                 <span
-                                                    class="text-secondary text-xs font-weight-bold">{{ $req->created_at->diffForHumans() }}</span>
+                                                    class="text-secondary text-xs font-weight-bold">{{ $email->created_at->diffForHumans() }}</span>
                                             </td>
 
                                         </tr>
@@ -68,7 +53,7 @@
                             </table>
                         @else
                             <div class="alert alert-danger text-center" role="alert">
-                                <h2>لا يوجد طلبات</h2>
+                                <h2>لا يوجد إيميلات</h2>
                             </div>
                         @endif
                     </div>

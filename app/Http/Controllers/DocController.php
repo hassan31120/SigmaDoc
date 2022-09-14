@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Email;
 use App\Models\Partner;
 use App\Models\Request as ModelsRequest;
 use Illuminate\Http\Request;
@@ -11,7 +12,7 @@ class DocController extends Controller
     public function index(){
 
         $partners = Partner::latest()->take(3)->get();
-        return view('home.home', compact('partners'));
+        return view('home.home', compact('partners'))->render();
 
     }
 
@@ -37,6 +38,15 @@ class DocController extends Controller
         $data = $request->all();
         ModelsRequest::create($data);
         return redirect(route('home'))->with('success', 'تم تسجيل بياناتك بنجاح');
+    }
+
+    public function storeEmail(Request $request){
+        $request->validate([
+            'email' => 'required'
+        ]);
+        $data = $request->all();
+        Email::create($data);
+        return redirect(route('home'))->with('success', 'تم تسجيل في الخدمة بنجاح');
     }
 
 }

@@ -27,10 +27,11 @@ Route::get('/prtners', [DocController::class, 'prtners'])->name('partners');
 Route::get('/about-us', [DocController::class, 'us'])->name('about_us');
 Route::get('/form', [DocController::class, 'form'])->name('form');
 Route::post('/form/create', [DocController::class, 'store'])->name('form.create');
+Route::post('/form/createMail', [DocController::class, 'storeEmail'])->name('form.createMail');
 
 
 Auth::routes();
-Route::get('/welcome', function(){
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
@@ -71,6 +72,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'isAdmin'], function () {
     Route::get('/partner/destroy/{id}', [PartnerController::class, 'destroy'])->name('admin.partner.destroy');
 
     //Requests
-    Route::get('home/requests', ['uses' => 'App\Http\Controllers\Admin\RequestsController@index'])->name('admin.requests');
+    Route::get('requests', ['uses' => 'App\Http\Controllers\Admin\RequestsController@index'])->name('admin.requests');
 
+    //Emails
+   Route::get('emails', ['uses' => 'App\Http\Controllers\Admin\EmailController@index'])->name('admin.emails');
 });

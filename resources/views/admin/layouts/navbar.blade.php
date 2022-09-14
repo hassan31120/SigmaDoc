@@ -5,17 +5,16 @@
             <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 ">
                 <li class="breadcrumb-item text-sm ps-2"><a class="opacity-5 text-dark" href="javascript:;">لوحات
                         القيادة</a></li>
-                <li class="breadcrumb-item text-sm text-dark active" aria-current="page">RTL</li>
+                <li class="breadcrumb-item text-sm text-dark active" aria-current="page">@yield('dash')</li>
             </ol>
-            <h6 class="font-weight-bolder mb-0">RTL</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 px-0" id="navbar">
-            <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+            {{-- <div class="ms-md-auto pe-md-3 d-flex align-items-center">
                 <div class="input-group input-group-outline">
                     <label class="form-label">أكتب هنا...</label>
                     <input type="text" class="form-control">
                 </div>
-            </div>
+            </div> --}}
             <ul class="navbar-nav me-auto ms-0 justify-content-end">
                 <li class="nav-item d-flex align-items-center">
                     <a href="javascript:;" class="nav-link text-body font-weight-bold px-0">
@@ -23,9 +22,7 @@
                         <span class="d-sm-inline d-none">{{ Auth::user()->name }}</span>
                     </a>
                 </li>
-                <li class="nav-item d-flex align-items-center" style="margin-right: 20px">
-                    <a href="{{ url('/logout') }}"> logout </a>
-                </li>
+                
                 <li class="nav-item d-xl-none pe-3 d-flex align-items-center">
                     <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
                         <div class="sidenav-toggler-inner">
@@ -41,11 +38,11 @@
                     </a>
                 </li>
                 <li class="nav-item dropdown ps-2 d-flex align-items-center">
-                    <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton"
+                    {{-- <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa fa-bell cursor-pointer"></i>
-                    </a>
-                    <ul class="dropdown-menu  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
+                    </a> --}}
+                    {{-- <ul class="dropdown-menu  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
                         <li class="mb-2">
                             <a class="dropdown-item border-radius-md" href="javascript:;">
                                 <div class="d-flex py-1">
@@ -121,7 +118,8 @@
                                 </div>
                             </a>
                         </li>
-                    </ul>
+                    </ul> --}}
+
                 </li>
             </ul>
         </div>

@@ -1,4 +1,7 @@
 @extends('admin.layouts.main')
+@section('dash')
+    الشركاء
+@endsection
 
 @section('content')
     <div class="row">

@@ -72,12 +72,15 @@
         <div class="container px-lg-5">
             <div class="row align-items-center" style="height: 250px;">
                 <div class="col-12 col-md-6">
-                    <h3 class="text-white">جاهز لحجز الكارت الخاص بك</h3>
+                    <h3 class="text-white">اشترك في خدمة آخر الأخبار</h3>
                     <div class="position-relative w-100 mt-3">
-                        <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
-                            placeholder="Enter Your Email" style="height: 48px;">
-                        <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
-                                class="fa fa-paper-plane text-primary fs-4"></i></button>
+                        <form action="{{ route('form.createMail') }}" method="POST">
+                            @csrf
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="email"
+                                placeholder="Enter Your Email" name="email" style="height: 48px;" required>
+                            <button type="submit" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
+                                    class="fa fa-paper-plane text-primary fs-4"></i></button>
+                        </form>
                     </div>
                 </div>
                 <div class="col-md-6 text-center mb-n5 d-none d-md-block">
@@ -107,15 +110,16 @@
                             <div class="d-flex justify-content-center">
                                 <img src="{{ asset($partner->image) }}" alt="" style="height: 200px;">
                             </div>
+
                             <center>
                                 <div class="p-5">
                                     <h5 class="mb-3">{{ $partner->name }}</h5>
-                                    <h5 class="mb-3">{{ $partner->discount }}</h5>
                                     <span>{{ $partner->description }}</span>
                                 </div>
                                 <div class="btn-group" role="group" aria-label="Basic example">
-                                    <button class="discount">Toggleeee</button> <br>
-                                    <p style="display: none">dbyvbhhb 5656</p>
+                                    <button onclick="showDis({{ $partner->discount }})" type="button"
+                                        class="btn btn-primary">show
+                                        discount</button>
                                 </div>
                             </center>
                         </div>
@@ -125,14 +129,5 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function() {
-            $("button").click(function() {
-                $("p").toggle();
-            });
-        });
-    </script>
     <!-- Service End -->
 @endsection

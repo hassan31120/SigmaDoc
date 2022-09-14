@@ -8,8 +8,8 @@
             <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard "
                 target="_blank">
 
-                <img src="{{ asset('admin/img/logo-ct.png') }}" class="navbar-brand-img h-100" alt="main_logo">
-                <span class="me-1 font-weight-bold text-white">SigmaDoc</span>
+                <img src="{{ asset('home/gallery/logo.png') }}" class="navbar-brand-img h-100" alt="main_logo">
+                <span class="me-1 font-weight-bold text-white">سيجما دوك</span>
             </a>
         </div>
         <hr class="horizontal light mt-0 mb-2">
@@ -19,7 +19,7 @@
                     <a class="nav-link {{ Request::path() == 'admin/users' ? 'active' : '' }}"
                         href="{{ route('admin.users') }}">
                         <div class="text-white text-center ms-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons-round opacity-10">format_textdirection_r_to_l</i>
+                            <i class="fas fa-user"></i>
                         </div>
                         <span class="nav-link-text me-1">الأعضاء</span>
                     </a>
@@ -28,7 +28,7 @@
                     <a class="nav-link {{ Request::path() == 'admin/cities' ? 'active' : '' }}"
                         href="{{ route('admin.cities') }}">
                         <div class="text-white text-center ms-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons-round opacity-10">format_textdirection_r_to_l</i>
+                            <i class="fas fa-city"></i>
                         </div>
                         <span class="nav-link-text me-1">المحافظات</span>
                     </a>
@@ -37,7 +37,7 @@
                     <a class="nav-link {{ Request::path() == 'admin/banners' ? 'active' : '' }}"
                         href="{{ route('admin.banners') }}">
                         <div class="text-white text-center ms-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons-round opacity-10">format_textdirection_r_to_l</i>
+                            <i class="fas fa-images"></i>
                         </div>
                         <span class="nav-link-text me-1">الصور</span>
                     </a>
@@ -46,20 +46,34 @@
                     <a class="nav-link {{ Request::path() == 'admin/partners' ? 'active' : '' }}"
                         href="{{ route('admin.partners') }}">
                         <div class="text-white text-center ms-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons-round opacity-10">format_textdirection_r_to_l</i>
+                            <i class="fas fa-handshake"></i>
                         </div>
                         <span class="nav-link-text me-1">الشركاء</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::path() == 'admin/home/requests' ? 'active' : '' }}"
+                    <a class="nav-link {{ Request::path() == 'admin/requests' ? 'active' : '' }}"
                         href="{{ route('admin.requests') }}">
                         <div class="text-white text-center ms-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons-round opacity-10">format_textdirection_r_to_l</i>
+                            <i class="fas fa-notes-medical"></i>
                         </div>
                         <span class="nav-link-text me-1">الطلبات</span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::path() == 'admin/emails' ? 'active' : '' }}"
+                        href="{{ route('admin.emails') }}">
+                        <div class="text-white text-center ms-2 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <span class="nav-link-text me-1">الإيميلات</span>
+                    </a>
+                </li>
             </ul>
+            <div class="sidenav-footer position-absolute w-100 bottom-0 ">
+                <div class="mx-3">
+                  <a class="btn bg-gradient-primary mt-4 w-100" href="{{ route('logout') }}" type="button"><i class="fas fa-sign-out-alt"></i> تسحيل الخروج</a>
+                </div>
+              </div>
         </div>
     </aside>
