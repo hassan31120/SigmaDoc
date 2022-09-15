@@ -33,7 +33,7 @@
         .form_Css input {
             display: block;
             width: 100%;
-            border: 2px black solid;
+            border: 2px #00B98E solid;
             border-top: none;
             border-right: none;
             border-left: none;

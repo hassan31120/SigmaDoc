@@ -103,7 +103,7 @@ function showDis(partner) {
     swal({
         position: 'top-end',
         icon: 'success',
-        title: ' قيمة الخصم: ' + `${partner}` + ' %',
+        title: ' قيمة الخصم تصل الى: ' + `${partner}` + ' %',
         showConfirmButton: false,
         buttons: {
             confirm: {

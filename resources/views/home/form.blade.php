@@ -44,7 +44,7 @@
                                 </div>
                             </div>
                             <div class="col-12 mt-2 d-flex justify-content-center form_Css">
-                                <button class="btn btn-primary w-50 py-3" type="submit">ارسال</button>
+                                <button class="btn btn-info w-50 py-3" type="submit" style="background-color: #00B98E; color:white">ارسال</button>
                             </div>
                         </div>
                     </form>
