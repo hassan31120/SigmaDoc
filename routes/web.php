@@ -47,6 +47,14 @@ Route::group(['prefix' => 'admin', 'middleware' => 'isAdmin'], function () {
     Route::post('/user/update/{id}', [UsersController::class, 'update'])->name('admin.user.update');
     Route::get('/user/destroy/{id}', [UsersController::class, 'destroy'])->name('admin.user.destroy');
 
+    // Admins
+    Route::get('/admins', [UsersController::class, 'Adminindex'])->name('admin.admins');
+    Route::get('/admin/create', [UsersController::class, 'Admincreate'])->name('admin.admin.create');
+    Route::post('/admin/store', [UsersController::class, 'Adminstore'])->name('admin.admin.store');
+    Route::get('/admin/edit/{id}', [UsersController::class, 'Adminedit'])->name('admin.admin.edit');
+    Route::post('/admin/update/{id}', [UsersController::class, 'Adminupdate'])->name('admin.admin.update');
+    Route::get('/admin/destroy/{id}', [UsersController::class, 'Admindestroy'])->name('admin.admin.destroy');
+
     // Cities
     Route::get('/cities', [CityController::class, 'index'])->name('admin.cities');
     Route::get('/city/create', [CityController::class, 'create'])->name('admin.city.create');
@@ -80,3 +88,4 @@ Route::group(['prefix' => 'admin', 'middleware' => 'isAdmin'], function () {
    Route::get('emails', ['uses' => 'App\Http\Controllers\Admin\EmailController@index'])->name('admin.emails');
    Route::get('emails/destroy/{id}', ['uses' => 'App\Http\Controllers\Admin\EmailController@destroy'])->name('admin.emails.destroy');
 });
+

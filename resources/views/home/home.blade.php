@@ -39,7 +39,7 @@
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow zoomIn" data-wow-delay="0.1s">
-                    <img class="img-fluid" src="{{ asset('home/img/img.png') }}">
+                    <img class="img-fluid" src="{{ asset('home/img/heyy.png') }}">
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">من نحن</div>
@@ -59,7 +59,7 @@
                             </div>
                         </div>
                     </div>
-                    <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="about.html">اعرف اكثر</a>
+                    <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="{{ route('about_us') }}">اعرف اكثر</a>
                 </div>
             </div>
         </div>

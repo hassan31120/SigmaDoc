@@ -29,6 +29,33 @@
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('home/css/style.css') }}" rel="stylesheet">
+    <style>
+        .form_Css input {
+            display: block;
+            width: 100%;
+            border: 2px black solid;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            margin-bottom: 50px;
+            transition: all .5s ease-in-out;
+
+        }
+
+        .form_Css input:hover {
+            width: 100%;
+            border-bottom-left-radius: 0%;
+            border-bottom-right-radius: 0%;
+        }
+
+        .form_Css input:focus {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-radius: 20px;
+            outline: 0;
+        }
+    </style>
 </head>
 
 <body style="overflow-x: hidden;">
@@ -46,10 +73,14 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                        <a href="{{ route('home') }}" class="nav-item nav-link {{ Request::path() == '/' ? 'active' : '' }}">الرئيسية</a>
-                        <a href="{{ route('about_us') }}" class="nav-item nav-link {{ Request::path() == 'about-us' ? 'active' : '' }}">من نحن</a>
-                        <a href="{{ route('partners') }}" class="nav-item nav-link {{ Request::path() == 'prtners' ? 'active' : '' }}">شركائنا</a>
-                        <a href="{{ route('form') }}" class="nav-item nav-link {{ Request::path() == 'form' ? 'active' : '' }}">احجز كارتك</a>
+                        <a href="{{ route('home') }}"
+                            class="nav-item nav-link {{ Request::path() == '/' ? 'active' : '' }}">الرئيسية</a>
+                        <a href="{{ route('about_us') }}"
+                            class="nav-item nav-link {{ Request::path() == 'about-us' ? 'active' : '' }}">من نحن</a>
+                        <a href="{{ route('partners') }}"
+                            class="nav-item nav-link {{ Request::path() == 'prtners' ? 'active' : '' }}">شركائنا</a>
+                        <a href="{{ route('form') }}"
+                            class="nav-item nav-link {{ Request::path() == 'form' ? 'active' : '' }}">احجز كارتك</a>
                     </div>
                     <a href="{{ route('home') }}"
                         class="btn btn-light rounded-pill text-primary py-2 px-4 ms-lg-5">SIGMAdoc</a>
