@@ -78,6 +78,15 @@
                         <span class="nav-link-text me-1">الإيميلات</span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::path() == 'admin/articles' ? 'active' : '' }}"
+                        href="{{ route('admin.articles') }}">
+                        <div class="text-white text-center ms-2 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <span class="nav-link-text me-1">المقالات</span>
+                    </a>
+                </li>
             </ul>
             <div class="sidenav-footer position-absolute w-100 bottom-0 ">
                 <div class="mx-3">

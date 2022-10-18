@@ -6,6 +6,13 @@
 <script src="{{ asset('admin/js/plugins/chartjs.min.js') }}"></script>
 <script src="{{ asset('admin/js/material-dashboard.min.js?v=3.0.0') }}"></script>
 
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+<script type="text/javascript">
+    $('#summernote').summernote({
+        height: 250
+    });
+</script>
 <script>
     var ctx = document.getElementById("chart-bars").getContext("2d");
 

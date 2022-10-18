@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\CityController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -78,6 +79,14 @@ Route::group(['prefix' => 'admin', 'middleware' => 'isAdmin'], function () {
     Route::get('/partner/edit/{id}', [PartnerController::class, 'edit'])->name('admin.partner.edit');
     Route::post('/partner/update/{id}', [PartnerController::class, 'update'])->name('admin.partner.update');
     Route::get('/partner/destroy/{id}', [PartnerController::class, 'destroy'])->name('admin.partner.destroy');
+
+    // Articles
+    Route::get('/articles', [ArticleController::class, 'index'])->name('admin.articles');
+    Route::get('/article/create', [ArticleController::class, 'create'])->name('admin.article.create');
+    Route::post('/article/store', [ArticleController::class, 'store'])->name('admin.article.store');
+    Route::get('/article/edit/{id}', [ArticleController::class, 'edit'])->name('admin.article.edit');
+    Route::post('/article/update/{id}', [ArticleController::class, 'update'])->name('admin.article.update');
+    Route::get('/article/destroy/{id}', [ArticleController::class, 'destroy'])->name('admin.article.destroy');
 
     //Requests
     Route::get('requests', ['uses' => 'App\Http\Controllers\Admin\RequestsController@index'])->name('admin.requests');
