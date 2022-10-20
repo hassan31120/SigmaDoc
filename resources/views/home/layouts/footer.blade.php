@@ -2,12 +2,12 @@
 <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn " data-wow-delay="0.1s" style="margin-top: 6rem;">
     <div class="container py-5">
         <div class="row g-5">
-            <div class="col-md-6 col-lg-3">
+            <div class="col-md-6 col-lg-3 text-center">
                 <h5 class="text-white mb-4">تواصل معنا</h5>
                 <p><i class="fa fa-map-marker-alt me-3 m-1"></i>Egypt, Mansoura</p>
                 <p><i class="fa fa-phone-alt me-3 m-1"></i>+20 01141630646</p>
                 <p><i class="fa fa-envelope me-3 m-1"></i>info@example.com</p>
-                <div class="d-flex pt-2">
+                <div class="d-flex pt-2 justify-content-center">
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
@@ -39,7 +39,7 @@
                         <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="email"
                             placeholder="ادخل بريدك الالكتروني" name="email" style="height: 48px;" required>
                         <button type="submit" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
-                                class="fa fa-paper-plane text-primary fs-4"></i></button>
+                                class="fa fa-paper-plane text-info fs-4"></i></button>
                     </form>
                 </div>
             </div>

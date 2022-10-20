@@ -345,3 +345,80 @@ body
     padding-left: 0;
     border-left: none;
 }
+
+.article .card {
+    height: 100%;
+    padding: 0;
+    width: 20rem;
+    border-radius: 10px;
+    box-shadow: rgba(97, 94, 94, 0.521) 0px 1px 9px;
+    transition: all 0.3s ease-in-out;
+  }
+  .article :hover .card {
+    box-shadow: rgba(61, 60, 60, 0.685) 0px 1px 9px;
+    transform: scale(1.02);
+  }
+  .article .card img {
+    height: 200px;
+    width: 100%;
+  }
+
+  .wedgit ul li {
+    list-style: none;
+  }
+  .wedgit .wedgit-content {
+    color: black;
+    display: flex;
+    margin-top: 3px;
+    height: 90px;
+  }
+  .wedgit .wedgit-content .entry-img {
+    width: 200px;
+    height: 90px;
+  }
+  .wedgit .wedgit-content .entry-img img {
+    width: 163px;
+    height: 99px;
+  }
+  .wedgit .wedgit-content .entry-content {
+    padding: 8px;
+  }
+  .wedgit .wedgit-content .entry-text {
+    margin-top: 6px;
+    padding: 5px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .wedgit ul
+    {
+      padding: 0;
+      margin: 0;
+    }
+    .wedgit ul li {
+      list-style: none;
+    }
+    .wedgit .wedgit-content {
+      color: black;
+      display: flex;
+      margin-top: 3px;
+      height: 90px;
+    }
+    .wedgit .wedgit-content .entry-img {
+      width: 140px;
+      height: 60px;
+      margin: 5px;
+    }
+    .wedgit .wedgit-content .entry-img img {
+      width: 130px;
+      height: 85px;
+    }
+    /* .wedgit .wedgit-content .entry-content
+    {
+      padding: 8px;
+    } */
+    .wedgit .wedgit-content .entry-text {
+      font-size: 10px;
+      font-weight: bold;
+      margin-top: 6px;
+    }
+  }

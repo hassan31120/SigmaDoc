@@ -81,6 +81,8 @@
                             class="nav-item nav-link {{ Request::path() == 'prtners' ? 'active' : '' }}">شركائنا</a>
                         <a href="{{ route('form') }}"
                             class="nav-item nav-link {{ Request::path() == 'form' ? 'active' : '' }}">احجز كارتك</a>
+                        <a href="{{ route('articles') }}"
+                            class="nav-item nav-link {{ Request::path() == 'articles' ? 'active' : '' }}"> المقالات</a>
                     </div>
                     <a href="{{ route('home') }}"
                         class="btn btn-light rounded-pill text-primary py-2 px-4 ms-lg-5">SIGMAdoc</a>

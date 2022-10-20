@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use App\Models\Email;
 use App\Models\Partner;
 use App\Models\Request as ModelsRequest;
@@ -11,10 +12,8 @@ use Illuminate\Support\Facades\Validator;
 class DocController extends Controller
 {
     public function index(){
-
         $partners = Partner::latest()->take(3)->get();
         return view('home.home', compact('partners'))->render();
-
     }
 
     public function prtners(){
@@ -53,6 +52,18 @@ class DocController extends Controller
         $data = $request->all();
         Email::create($data);
         return redirect(route('home'))->with('success', 'تم التسجيل في الخدمة بنجاح');
+    }
+
+    public function articles(){
+        $articles = Article::paginate(6);
+        return view('home.articles', compact('articles'));
+    }
+
+    public function article($id){
+        $articles = Article::latest()->take(4)->get();
+        $partners = Partner::latest()->take(3)->get();
+        $article = Article::find($id);
+        return view('home.article', compact('article', 'articles', 'partners'));
     }
 
 }
