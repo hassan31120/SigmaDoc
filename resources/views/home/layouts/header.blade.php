@@ -94,7 +94,7 @@
                         <a href="{{ route('about_us') }}"
                             class="nav-item nav-link {{ Request::path() == 'about-us' ? 'active' : '' }}">من نحن</a>
                         <a href="{{ route('partners') }}"
-                            class="nav-item nav-link {{ Request::path() == 'prtners' ? 'active' : '' }}">شركائنا</a>
+                            class="nav-item nav-link {{ Request::path() == 'partners' ? 'active' : '' }}">شركائنا</a>
                         <a href="{{ route('form') }}"
                             class="nav-item nav-link {{ Request::path() == 'form' ? 'active' : '' }}">احجز كارتك</a>
                         <a href="{{ route('articles') }}"
