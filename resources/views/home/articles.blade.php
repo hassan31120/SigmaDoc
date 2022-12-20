@@ -13,10 +13,9 @@
         <div class="container ">
             <div class="row d-flex justify-content-center article ">
                 @foreach ($articles as $article)
-                    <div class="col-lg-4 col-md-6 col-sm-6 pb-4  d-flex justify-content-center ">
+                    <div class="col-lg-4 col-md-6 col-sm-6 pb-4  d-flex justify-content-center" style="height: 450px">
                         <a href="{{ route('article', $article->id) }}" class="card-link">
-                            <div class="card text-center"
-                                style="width: 320px; height: 500px; overflow: hidden; position: relative;">
+                            <div class="card shadow text-center" style="width: 320px; overflow: hidden; position: relative;">
                                 <img src="{{ asset($article->image) }}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $article->title }}</h5>
@@ -28,7 +27,7 @@
                 @endforeach
             </div>
             <div class="d-flex justify-content-center">
-                {!! $articles->links() !!}
+                <div class="text-center">{!! $articles->onEachSide(0.2)->links() !!}</div>
             </div>
         </div>
     </div>
